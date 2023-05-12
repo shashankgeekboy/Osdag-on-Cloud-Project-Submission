@@ -26,6 +26,7 @@ export default function App() {
         camera={{ position: [450, 650, 20], fov: 30 }}
       >
         <Suspense fallback={"loading..."}>
+          {/* This will render model.stl file, if you want to render any other model do write /filename.stl in place of url make sure file is in public folder */}
           <ModelRender url="/model.stl" />
         </Suspense>
         <OrbitControls panSpeed={0.5} rotateSpeed={0.4} />
